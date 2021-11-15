@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the problem number which is to be executed \n 1.Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Day of Week \n 6.TemperatureConversion \n 7.Monthly Payment \n 8.Vending Machine \n 9.Exit");
+                Console.WriteLine("Enter the problem number which is to be executed \n 1.Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Day of Week \n 6.TemperatureConversion \n 7.Monthly Payment \n 8.Simulate Stopwatch \n 9.Vending Machine \n 10.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,12 +42,16 @@ namespace LogicalPrograms
                         month.Payment();
                         break;
                     case 8:
+                        SimulateStopwatch stopwatch = new SimulateStopwatch();
+                        stopwatch.Timer();
+                        break;
+                    case 9:
                         Console.WriteLine("Enter the amount : ");
                         int money = Convert.ToInt32(Console.ReadLine());
                         VendingMachine change = new VendingMachine();
                         change.Machine(money);
                         break;
-                    case 9:
+                    case 10:
                         flag = false;
                         break;
                 }
